@@ -22,4 +22,4 @@ fs.readdir("./komutlar/", (err, files) => {
   });
 });
 
-client.login('OTc0NDI4NTc5NTc4NDA0OTI0.GLYgTK.4kXBPMgEh8U5RPfZiw-jNKijfZvIFy0f1m0Efc')
+client.login('Token')
