@@ -2,7 +2,6 @@ const { Client, Message, MessageEmbed, Collection } = require("discord.js");
 const client = new Client({ intents: ["GUILDS", "GUILD_INVITES", "GUILD_MEMBERS", "GUILD_MESSAGES"], partials: ["CHANNEL", "GUILD_MEMBER", "MESSAGE", "USER"] });
 const fs = require("fs");
 const ayarlar = require("./config.json");
-const token = process.env.TOKEN
 
 module.exports = client;
 
@@ -22,13 +21,5 @@ fs.readdir("./komutlar/", (err, files) => {
     });
   });
 });
-
-if(!token){
-  console.log("Bu Proje Glitch Özel Uyarlanmıştır, .env Dosyasına Discord Bot Tokeninizi Yazınız")
-} else { 
-client.login(token).catch(e => {
-  console.log("Projeye Yazılan Token Hatalı Veya Discord Botunuzun Intentleri Kapalı")
-})
-}
 
 client.login('OTc0NDI4NTc5NTc4NDA0OTI0.GLYgTK.4kXBPMgEh8U5RPfZiw-jNKijfZvIFy0f1m0Efc')
